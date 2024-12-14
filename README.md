@@ -44,3 +44,6 @@ Campus Events is a web-based platform designed to streamline and enhance the cam
 
 ### Local Setup
 1. Clone the repository
+
+### Frontend Deployment Link
+https://campus-event-zeta.vercel.app
