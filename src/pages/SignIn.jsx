@@ -36,8 +36,8 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const url = isSignUp
-      ? "http://localhost:5002/api/users/register"
-      : "http://localhost:5002/api/users/signin";
+      ? `${import.meta.env.VITE_BACKEND_URL}}/api/users/register`
+      : `${import.meta.env.VITE_BACKEND_URL}/api/users/signin`;
 
     const userData = isSignUp
       ? { name, email, password, preferences }

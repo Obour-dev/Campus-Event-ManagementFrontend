@@ -14,7 +14,7 @@ const EventCalendar = () => {
     const fetchEvents = async () => {
       try {
         const query = preferences ? `?eventType=${preferences}` : "";
-        const response = await fetch(`http://localhost:5002/api/events${query}`);
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/events${query}`);
         if (!response.ok) {
           throw new Error("Failed to fetch events.");
         }

@@ -27,7 +27,7 @@ const UserProfile = () => {
         return;
       }
       try {
-        const userResponse = await fetch(`http://localhost:5002/api/users/${userId}`);
+        const userResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/users/${userId}`);
 
         if (!userResponse.ok) {
           throw new Error("Failed to fetch user details.");
@@ -38,7 +38,7 @@ const UserProfile = () => {
         setPreferences(userData.preferences || "");
         setEditedPreferences(userData.preferences || "");
 
-        const eventsResponse = await fetch(`http://localhost:5002/api/events/user/${userId}`);
+        const eventsResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/events/user/${userId}`);
 
         if (!eventsResponse.ok) {
           throw new Error("Failed to fetch RSVP'd events.");
@@ -56,7 +56,7 @@ const UserProfile = () => {
 
   const handlePreferencesUpdate = async () => {
     try {
-      const response = await fetch(`http://localhost:5002/api/users/${userId}/preferences`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/users/${userId}/preferences`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

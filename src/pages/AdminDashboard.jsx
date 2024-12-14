@@ -18,7 +18,7 @@ const AdminDashboard = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch("http://localhost:5002/api/events");
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/events`);
       if (!response.ok) {
         throw new Error("Failed to fetch events.");
       }
@@ -38,7 +38,7 @@ const AdminDashboard = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5002/api/events/create", {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/events/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -63,7 +63,7 @@ const AdminDashboard = () => {
   const handleDelete = async (eventId) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:5002/api/events/delete/${eventId}`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_UR}/api/events/delete/${eventId}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}`,
