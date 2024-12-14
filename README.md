@@ -3,6 +3,10 @@
 ## Project Overview
 Campus Events is a web-based platform designed to streamline and enhance the campus event experience. It serves as a centralized hub where students can discover, track, and participate in various campus activities including workshops, seminars, and club events. The platform aims to improve student engagement and make event management more efficient.
 
+## Login Credentials
+- Email: obourtawiah@gmail.com
+- Password: hello
+
 ## Feature Checklist
 
 ### Core Features
