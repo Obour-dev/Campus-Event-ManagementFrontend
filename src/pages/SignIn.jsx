@@ -36,7 +36,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const url = isSignUp
-      ? `${import.meta.env.VITE_BACKEND_URL}}/api/users/register`
+      ? `${import.meta.env.VITE_BACKEND_URL}/api/users/register`
       : `${import.meta.env.VITE_BACKEND_URL}/api/users/signin`;
 
     const userData = isSignUp
